@@ -1,0 +1,15 @@
+{
+  "name": "de.redstonepfalz.einkochen",
+  "displayName": "Einkochen leicht gemacht",
+  "version": "1.4.3",
+  "description": "Einkochen leicht gemacht",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "RedstonePfalz",
+  "license": "Apache-2.0"
+}
