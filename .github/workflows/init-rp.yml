@@ -7,6 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: ReleasePlease
-        run: "npm i release-please -g && release-please bootstrap --token=$GITHUB_TOKEN --repo-url=RedstonePfalz/Einkochen-leicht-gemacht"
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+        run: "npm i release-please -g && release-please bootstrap --token=${{ secrets.GITHUB_TOKEN }} --repo-url=RedstonePfalz/Einkochen-leicht-gemacht"
