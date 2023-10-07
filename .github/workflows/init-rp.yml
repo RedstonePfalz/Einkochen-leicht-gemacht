@@ -1,6 +1,9 @@
 name: "Init Release Please"
 on:
   - issues
+
+permissions: write-all
+
 jobs:
   build:
     runs-on: ubuntu-latest
