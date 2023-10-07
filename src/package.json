@@ -14,7 +14,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@babel/core": "^7.22.10",
-    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-env": "^7.22.20",
     "@material/select": "^14.0.0",
     "babel-loader": "^9.1.3",
     "cordova-android": "^12.0.1",
