@@ -10,7 +10,7 @@
 [![Made with Webstorm](https://img.shields.io/badge/Made%20with%20WebStorm-000000?style=for-the-badge&logo=WebStorm&logoColor=white)]()
 
 # To Do
-- Rote Beete hinzufügen
+- Rote Beete hinzufügenü
 - Material-Design 3 einfügen
 
 
