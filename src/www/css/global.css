@@ -1,0 +1,50 @@
+body {
+    user-select: none;
+    font-family: 'Roboto', serif;
+    font-size: 16px;
+    --mdc-theme-primary: #8DB600;
+    --mdc-theme-on-primary: #fff;
+    background-color: #ffffff;
+    color: #000;
+    /*
+    --mdc-theme-primary: #00BFFF;
+    --mdc-theme-primary: #FF1493;
+    --mdc-theme-on-primary: #fff;
+     */
+    /* line-height: 1.5; */
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', serif;
+    font-weight: 700;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.notice {
+    color: red;
+}
+
+.btn-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    color: var(--mdc-theme-primary)
+}
+
+.mdc-select__anchor {
+    width: 320px;
+}
+
+.mdc-floating-label {
+    font-size: 12px;
+}
+
+.mdc-list-item {
+    line-height: 250%;
+}

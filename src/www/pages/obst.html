@@ -1,0 +1,132 @@
+<div class="content">
+  <p>Bitte wählen Sie aus, welches Obst Sie einkochen möchten.</p>
+  <br>
+  <div class="mdc-select mdc-select--filled">
+    <div class="mdc-select__anchor" role="button" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="label selected-text">
+      <span class="mdc-select__ripple"></span>
+      <span id="label" class="mdc-floating-label">-- Bitte Obstsorte auswählen --</span>
+      <span class="mdc-select__selected-text-container">
+        <span id="selected-text" class="mdc-select__selected-text"></span>
+      </span>
+      <span class="mdc-select__dropdown-icon">
+        <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+          <polygon points="7 10 12 15 17 10" fill-rule="evenodd" stroke="none" class="mdc-select__dropdown-icon-inactive"></polygon>
+          <polygon points="7 15 12 10 17 15" fill-rule="evenodd" stroke="none" class="mdc-select__dropdown-icon-active"></polygon>
+        </svg>
+      </span>
+      <span class="mdc-line-ripple"></span>
+    </div>
+
+    <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+      <ul class="mdc-list" role="listbox" aria-label="Obst auswählen">
+        <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="" role="option">
+          <span class="mdc-list-item__ripple"></span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="apfel" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Äpfel weich/hart
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="apfelmus" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Apfelmus
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="aprikosen" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Aprikosen
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="birnen" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Birnen weich/hart
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="brombeeren" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Brombeeren
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="erdbeeren" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Erdbeeren
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="himbeeren" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Himbeeren
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="johannisbeeren" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Johannisbeeren
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="kirschen" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Kirschen
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="mirabellen" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Mirabellen
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="pfirsiche" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Pfirsiche
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="pflaumen" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Pflaumen
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="preiselbeeren" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Preiselbeeren
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="renekloden" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Renekloden
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="rhabarber" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Rhabarber
+          </span>
+        </li>
+        <li class="mdc-list-item" aria-selected="false" data-value="stachelbeeren" role="option">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+            Stachelbeeren
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <br><br>
+  <div id="details" class="hidden">
+    <p>Temperatur:&nbsp;<span id="temperatur"></span>&nbsp;°C</p><br>
+    <p>Zeit:&nbsp;<span id="zeit"></span>&nbsp;min</p><br>
+    <p>Zucker auf 1l Wasser:&nbsp;<span id="z1l"></span>&nbsp;</p><br>
+    <p>Zucker auf 1kg Obst:&nbsp;<span id="z1k"></span>&nbsp;</p><br>
+    <p class="notice" id="notice"></p>
+  </div>
+</div>
