@@ -137,4 +137,3 @@ obstselect.listen("MDCSelect:change", () => {
 
     $("#details").removeClass("hidden");
 });
-
