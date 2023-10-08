@@ -2,8 +2,9 @@ body {
     user-select: none;
     font-family: 'Roboto', serif;
     font-size: 16px;
-    --mdc-theme-primary: #8DB600;
-    --mdc-theme-on-primary: #fff;
+    --md-sys-color-primary: #8DB600;
+    --md-sys-color-secondary-container: #9FFF80;
+    --md-sys-color-surface-container: #D9FFCC;
     background-color: #ffffff;
     color: #000;
     /*

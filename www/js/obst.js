@@ -1,7 +1,9 @@
-import "@material/web/button/filled-button";
+import "@material/web/select/outlined-select";
+import "@material/web/select/select-option";
 
 let obst;
 
+document.addEventListener("change", selectmenuchange, false);
 
 let z1k = $("#z1k");
 let z1l = $("#z1l");
@@ -9,9 +11,8 @@ let zeit = $("#zeit");
 let temperatur = $("#temperatur");
 let notice = $("#notice");
 
-obstselect.listen("MDCSelect:change", () => {
-    obst = obstselect.value;
-
+function selectmenuchange() {
+    obst = document.querySelector("md-outlined-select").value
     //TODO: Sprachenunterstützung per JSON-Strings
 
     notice.hide();
@@ -136,4 +137,4 @@ obstselect.listen("MDCSelect:change", () => {
 
 
     $("#details").removeClass("hidden");
-});
+}

@@ -1,10 +1,4 @@
 
-function initripples() {
-    document.querySelectorAll(".elg-btn").forEach(function(button) {
-        mdc.ripple.MDCRipple.attachTo(button);
-    });
-}
-
 function switchPage(page) {
     $.ajax({
         url: "./pages/" + page + ".html",
@@ -12,7 +6,6 @@ function switchPage(page) {
             $("#app").html(result);
         }
     });
-    setTimeout(initripples, 300)
     let scriptElement = document.createElement("script");
     if (page === "home") {
         scriptElement.src = "js/" + page + ".js";
