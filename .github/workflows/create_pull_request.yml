@@ -1,0 +1,23 @@
+name: Create Pull Request
+
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  create_pull_request:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: "Checkout"
+      uses: actions/checkout@v2
+    - name: Get Commit Message
+      id: commit_message
+      run: echo "::set-output name=message::$(git log --format=%B -n 1 $GITHUB_SHA)"
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: develop
+        title: ${{ steps.commit_message.outputs.message }}
+        body: ${{ steps.commit_message.outputs.message }}
