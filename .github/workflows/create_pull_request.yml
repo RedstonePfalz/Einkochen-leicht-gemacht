@@ -1,4 +1,5 @@
 name: Create Pull Request
+permissions: write-all
 
 on:
   push:
