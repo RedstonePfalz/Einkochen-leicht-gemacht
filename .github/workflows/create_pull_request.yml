@@ -19,5 +19,6 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         branch: develop
+        base: main
         title: ${{ steps.commit_message.outputs.message }}
         body: ${{ steps.commit_message.outputs.message }}
