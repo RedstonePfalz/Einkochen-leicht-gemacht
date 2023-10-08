@@ -4,7 +4,7 @@
   "pull-request-title-pattern": "release: ${version}",
   "release-type": "node",
   "packages": {
-    "./src": {
+    ".": {
       "changelog-path": "CHANGELOG.md",
       "draft": false,
       "prerelease": true
