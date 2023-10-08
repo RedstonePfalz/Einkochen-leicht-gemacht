@@ -1,6 +1,5 @@
-import {MDCSelect} from "@material/select";
+import "@material/web/button/filled-button";
 
-const obstselect = new MDCSelect(document.querySelector(".mdc-select"))
 let obst;
 
 let z1k = $("#z1k");
