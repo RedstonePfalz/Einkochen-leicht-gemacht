@@ -82,4 +82,51 @@
     src: url(roboto/Roboto-BlackItalic.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: "Tilt Neon";
+    font-weight: 400;
+    font-style: normal;
+    src: url("tilt_neon/TiltNeon-Regular.ttf") format("truetype")
+}
 
+@font-face {
+    font-family: "Gabarito";
+    font-weight: 400;
+    font-style: normal;
+    src: url("gabarito/Gabarito-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Gabarito";
+    font-weight: 500;
+    font-style: normal;
+    src: url("gabarito/Gabarito-Medium.ttf")
+}
+
+@font-face {
+    font-family: "Gabarito";
+    font-weight: 600;
+    font-style: normal;
+    src: url("gabarito/Gabarito-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Gabarito";
+    font-weight: 700;
+    font-style: normal;
+    src: url("gabarito/Gabarito-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Gabarito";
+    font-weight: 800;
+    font-style: normal;
+    src: url("gabarito/Gabarito-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Gabarito";
+    font-weight: 900;
+    font-style: normal;
+    src: url("gabarito/Gabarito-Black.ttf") format("truetype");
+}
