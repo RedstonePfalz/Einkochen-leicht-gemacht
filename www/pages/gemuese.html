@@ -1,10 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 <!-- TODO: Rote Beete (100°C bei 30 min) !-->
-</body>
-</html>
+<div class="content">
+    <p>Bitte wählen Sie aus, welches Gemüse Sie einkochen möchten.</p>
+    <br>
+    <md-outlined-select>
+        <md-select-option selected>
+            <div slot="headline">-- Bitte Obstsorte auswählen --</div>
+        </md-select-option>
+        <md-select-option value="blumenkohl">
+            <div slot="headline">
+                Blumenkohl
+            </div>
+        </md-select-option>
+        <md-select-option value="erbsen">
+            <div slot="headline">
+                Erbsen
+            </div>
+        </md-select-option>
+        <md-select-option value="gewuerzgurken">
+            <div slot="headline">
+                Gewürzgurken
+            </div>
+        </md-select-option>
+        <md-select-option value="gruenebohnen">
+            <div slot="headline">
+                Grüne Bohnen
+            </div>
+        </md-select-option>
+        <md-select-option value="karotten">
+            <div slot="headline">
+                Karotten
+            </div>
+        </md-select-option>
+        <md-select-option value="kohlrabi">
+            <div slot="headline">
+                Kohlrabi
+            </div>
+        </md-select-option>
+        <md-select-option value="kuerbis">
+            <div slot="headline">
+                Kürbis
+            </div>
+        </md-select-option>
+        <md-select-option value="pilze">
+            <div slot="headline">
+                Pilze
+            </div>
+        </md-select-option>
+        <md-select-option value="rosenkohl">
+            <div slot="headline">
+                Rosenkohl
+            </div>
+        </md-select-option>
+        <md-select-option value="rotebeete">
+            <div slot="headline">
+                Rote Beete
+            </div>
+        </md-select-option>
+        <md-select-option value="rotkohl">
+            <div slot="headline">
+                Rotkohl
+            </div>
+        </md-select-option>
+        <md-select-option value="sellerie">
+            <div slot="headline">
+                Sellerie
+            </div>
+        </md-select-option>
+        <md-select-option value="spargel">
+            <div slot="headline">
+                Spargel
+            </div>
+        </md-select-option>
+        <md-select-option value="tomaten">
+            <div slot="headline">
+                Tomaten
+            </div>
+        </md-select-option>
+    </md-outlined-select>
+    <br><br>
+    <div id="details" class="hidden">
+        <p>Temperatur:&nbsp;<span id="temperatur"></span>&nbsp;°C</p><br>
+        <p>Zeit:&nbsp;<span id="zeit"></span>&nbsp;min</p><br>
+        <p class="notice" id="notice"></p>
+    </div>
+</div>
