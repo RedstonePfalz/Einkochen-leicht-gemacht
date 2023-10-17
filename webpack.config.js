@@ -4,7 +4,8 @@ module.exports = {
     mode: 'production',
     entry: {
       obst: "./www/js/obst.js",
-      home_md_loader: "./www/js/home_md_loader.js"
+      home_md_loader: "./www/js/home_md_loader.js",
+      gemuese: "./www/js/gemuese.js",
     },
     output: {
         filename: '[name].min.js', // Verwendet den Dateinamen der Eingabedatei
