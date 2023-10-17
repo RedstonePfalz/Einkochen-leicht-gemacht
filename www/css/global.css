@@ -1,6 +1,8 @@
 body {
     user-select: none;
-    font-family: 'Roboto', serif;
+    --md-ref-typeface-brand: "Gabarito";
+    --md-ref-typeface-plain: "Gabarito";
+    font-family: 'Gabarito', sans-serif;
     font-size: 16px;
     --md-sys-color-primary: #8DB600;
     --md-sys-color-secondary-container: #9FFF80;
