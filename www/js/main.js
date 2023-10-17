@@ -1,4 +1,4 @@
-let pages = ["home", "obst", "gemuese", "tipps", "produkte"];
+let pages = ["home", "obst", "gemuese", "fleisch", "tipps", "produkte"];
 
 function observePageChanges() {
     const targetNode = document.querySelector("body");
@@ -51,6 +51,13 @@ function onBackButtonPress() {
     switchPage("home");
 }
 
+window.onhashchange = function() {
+    if (pages.includes(window.location.hash.replace('#', ''))) {
+        switchPage(window.location.hash.replace('#', ''));
+    } else {
+       switchPage("home");
+    }
+};
 
 if (pages.includes(window.location.hash.replace('#', ''))) {
     switchPage(window.location.hash.replace('#', ''));

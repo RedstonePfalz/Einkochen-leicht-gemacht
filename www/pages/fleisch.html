@@ -1,0 +1,45 @@
+<div class="content">
+    <p>Bitte wählen Sie aus, welche Art von Fleisch Sie einkochen möchten.</p>
+    <br>
+    <md-outlined-select>
+        <md-select-option selected>
+            <div slot="headline">-- Bitte Fleischsorte auswählen --</div>
+        </md-select-option>
+        <md-select-option value="braten">
+            <div slot="headline">
+                Braten am Stück
+            </div>
+        </md-select-option>
+        <md-select-option value="fleischbruehe">
+            <div slot="headline">
+                Fleischbrühe
+            </div>
+        </md-select-option>
+        <md-select-option value="gulasch">
+            <div slot="headline">
+                Gulasch
+            </div>
+        </md-select-option>
+        <md-select-option value="hackfleisch">
+            <div slot="headline">
+                Hackfleisch
+            </div>
+        </md-select-option>
+        <md-select-option value="wild">
+            <div slot="headline">
+                Wild, Geflügel
+            </div>
+        </md-select-option>
+        <md-select-option value="wuerste">
+            <div slot="headline">
+                Würste
+            </div>
+        </md-select-option>
+    </md-outlined-select>
+    <br><br>
+    <div id="details" class="hidden">
+        <p>Temperatur:&nbsp;<span id="temperatur"></span>&nbsp;°C</p><br>
+        <p>Zeit:&nbsp;<span id="zeit"></span>&nbsp;min</p><br>
+        <p class="notice" id="notice"></p>
+    </div>
+</div>
