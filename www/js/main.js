@@ -31,6 +31,7 @@ function switchPage(page) {
 
     let scriptElement = document.createElement("script");
     let scriptElement2 = document.createElement("script");
+
     if (page === "home") {
         scriptElement.src = "js/" + page + ".js";
         scriptElement2.src = "js/home_md_loader.min.js";
@@ -39,6 +40,19 @@ function switchPage(page) {
     } else {
         scriptElement.src = "js/" + page + ".min.js";
     }
+
+    if(page === "produkte" || page === "tipps") {
+        let BootstrapCSSLoader = document.createElement("link");
+        let BootstrapJSLoader = document.createElement("script");
+        BootstrapCSSLoader.href = "lib/bootstrap.css";
+        BootstrapCSSLoader.rel = "stylesheet";
+        BootstrapJSLoader.src   = "lib/bootstrap.js";
+        BootstrapJSLoader.className = "page_js";
+        BootstrapCSSLoader.className = "page_js";
+        document.head.appendChild(BootstrapJSLoader);
+        document.head.appendChild(BootstrapCSSLoader);
+    }
+
     scriptElement.className = "page_js";
     document.head.appendChild(scriptElement);
     localStorage.setItem("page", page);
