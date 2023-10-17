@@ -12,7 +12,7 @@ let temperatur = $("#temperatur");
 let notice = $("#notice");
 
 function selectmenuchange() {
-    obst = document.querySelector("md-outlined-select").value
+    obst = document.querySelector("md-outlined-select").value;
     //TODO: Sprachenunterstützung per JSON-Strings
 
     notice.hide();
