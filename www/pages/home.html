@@ -22,3 +22,21 @@
 
     </div>
 </div>
+<md-dialog id="updateDialog">
+    <div slot="headline">
+        App aktualisiert
+    </div>
+    <form slot="content" id="form-id" method="dialog">
+        Die App wurde auf eine neue Version aktualisiert.<br>
+        Die Neuerungen:<br>
+        <ul>
+            <li>App farbenfroher gestaltet</li>
+            <li>Schriftart geändert</li>
+            <li>Die App funktioniert nun komplett ohne Internet</li>
+            <li>Probleme behoben</li>
+        </ul>
+    </form>
+    <div slot="actions">
+        <md-text-button form="form-id" id="close-btn">Schließen</md-text-button>
+    </div>
+</md-dialog>
