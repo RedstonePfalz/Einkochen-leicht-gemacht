@@ -10,7 +10,7 @@
                 "updater": "semantic"
             }
         ]
-    }
+  },
   "packages": {
     ".": {
       "changelog-path": "CHANGELOG.md",
