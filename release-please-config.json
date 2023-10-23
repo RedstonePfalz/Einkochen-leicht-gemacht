@@ -7,7 +7,7 @@
     {
       "type": "xml",
       "path": "config.xml",
-      "xpath": "/widget/@version"
+      "xpath": "//widget/@version"
     }
   ],
   "packages": {
