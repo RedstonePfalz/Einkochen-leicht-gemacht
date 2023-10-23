@@ -4,11 +4,14 @@ updates:
     directory: "src/"
     schedule:
       interval: "daily"
-      time: "16:07"
+      time: "12:36"
       timezone: "Europe/Berlin"
     open-pull-requests-limit: 100
+    ignore:
+      - dependency-name: "*"
+        update-type: "widen"
     commit-message:
-      prefix: "deps: "
+      prefix: ""
       include: "scope"
     labels:
       - "dependencies"
