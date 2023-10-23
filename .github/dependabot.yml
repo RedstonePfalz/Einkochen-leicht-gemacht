@@ -1,15 +1,12 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: "src/"
+    directory: "/"
     schedule:
       interval: "daily"
-      time: "12:36"
+      time: "12:39"
       timezone: "Europe/Berlin"
     open-pull-requests-limit: 100
-    ignore:
-      - dependency-name: "*"
-        update-type: "widen"
     commit-message:
       prefix: ""
       include: "scope"
