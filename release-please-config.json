@@ -6,7 +6,7 @@
   "extra-files": [
     {
       "type": "xml",
-      "path": "./config.xml",
+      "path": "config.xml",
       "xpath": "/widget/@version"
     }
   ],
