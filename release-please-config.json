@@ -3,7 +3,13 @@
   "include-v-in-tag": true,
   "pull-request-title-pattern": "release: ${version}",
   "release-type": "node", 
-  "extra-files": ["config.xml"],
+  "extra-files": [
+    {
+      "type": "xml",
+      "path": "config.xml",
+      "xpath": "/widget/@version"
+    }
+  ],
   "packages": {
     ".": {
       "changelog-path": "CHANGELOG.md",
