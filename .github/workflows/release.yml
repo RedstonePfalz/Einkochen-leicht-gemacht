@@ -1,0 +1,142 @@
+name: Create new Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-config:
+    name: Konfiguration aktualisieren
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: |
+          npm install --only=dev
+
+      - name: Get release version from .release-please-manifest.json
+        id: release_version
+        run: |
+          # Read the release version from .release-please-manifest.json
+          RELEASE_NAME=$(jq -r '.["."]' .release-please-manifest.json)
+          echo "::set-output name=release_version::$RELEASE_NAME"
+
+      - name: Update config.xml and create a new commit
+        run: |
+          # Get the release version from the previous step
+          RELEASE_NAME=${{ steps.release_version.outputs.release_version }}
+          
+          # Update the config.xml file with the new version
+          sed -i "s/<widget[^>]*version=\"[^\"]*\"/<widget version=\"$RELEASE_NAME\"/" config.xml
+          
+          # Commit the changes
+          git config user.name "${{ secrets.botname }}"
+          git config user.email "${{ secrets.botemail }}"
+          git add config.xml
+          git commit -m "chore: Update version in config.xml"
+          
+          git push --tags origin HEAD:main
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: config-xml
+          path: config.xml
+
+  build-sign-release:
+    needs: update-config
+    name: Release erstellen
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.18'
+
+      - name: Set up Java JDK
+        uses: actions/setup-java@v3.13.0
+        with:
+          java-version: 11
+          distribution: adopt
+          java-package: jdk
+          architecture: x64
+
+      - name: Install Cordova
+        run: npm install -g cordova
+
+      - name: Install Dependencies
+        run: npm install --only=dev
+
+      - name: Install Android SDK
+        run: |
+          export ANDROID_HOME=/home/user/ANDROID_SDK
+
+      - name: Install Gradle
+        run: export PATH="/home/user/gradle-7.6/bin:$PATH"
+
+      - name: Get version from .release-please-manifest.json
+        id: release_version
+        run: |
+          RELEASE_NAME=$(jq -r '.["."]' .release-please-manifest.json)
+          echo "::set-output name=release_version::$RELEASE_NAME"
+
+      - name: Build Android release
+        run: |
+          npx webpack --config webpack.config.js
+          cordova platform add android
+          
+          cat <<EOL > platforms/android/build-extras.gradle
+          android {
+              aaptOptions.cruncherEnabled = false
+          }
+          EOL
+          
+          cordova build android --release -- --keystore=${{ secrets.keystore }} --storePassword=${{ secrets.keystore_pwd }} --alias=${{ secrets.keystore_alias }} --password=${{ secrets.key_pwd }} --packageType=bundle
+          cordova build android --release -- --keystore=${{ secrets.keystore }} --storePassword=${{ secrets.keystore_pwd }} --alias=${{ secrets.keystore_alias }} --password=${{ secrets.key_pwd }} --packageType=apk
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ secrets.BOT_TOKEN }}
+          tag_name: v${{ steps.release_version.outputs.release_version }}
+          title: v${{ steps.release_version.outputs.release_version }}
+          body: |
+            Neue Version
+            $(cat CHANGELOG.md)
+
+      - name: Upload APK as Release Asset
+        run: |
+          release_id=${{ steps.create_release.outputs.id }}
+          apk_file_path="platforms/android/app/build/outputs/apk/release/app-release.apk"
+          apk_name="Einkochen-leicht-gemacht-v${{ steps.release_version.outputs.release_version }}.apk"
+          apk_content_type="application/vnd.android.package-archive"
+          apk_upload_url="https://uploads.github.com/repos/${{ github.repository }}/releases/${release_id}/assets?name=${apk_name}"
+          
+          curl \
+            -XPOST \
+            -H "Authorization: token ${{ secrets.BOT_TOKEN }}" \
+            -H "Content-Type: $apk_content_type" \
+            --data-binary @"$apk_file_path" "$apk_upload_url"
+          
+          aab_file_path="platforms/android/app/build/outputs/bundle/release/app-release.aab"
+          aab_name="Einkochen-leicht-gemacht-v${{ steps.release_version.outputs.release_version }}.aab"
+          aab_content_type="application/vnd.android.package-archive"
+          aab_upload_url="https://uploads.github.com/repos/${{ github.repository }}/releases/${release_id}/assets?name=${aab_name}"
+          
+          curl \
+            -XPOST \
+            -H "Authorization: token ${{ secrets.bot_token }}" \
+            -H "Content-Type: $aab_content_type" \
+            --data-binary @"$aab_file_path" "$aab_upload_url"
