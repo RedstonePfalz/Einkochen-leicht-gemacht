@@ -70,7 +70,7 @@ jobs:
               await exec.exec('git', ['config', 'pull.rebase', 'true']);
 
               
-              await exec.exec('git', ['pull', 'https://github.com/RedstonePfalz/ELG-Test.git', 'main', '--rebase']);
+              await exec.exec('git', ['pull', 'https://github.com/RedstonePfalz/Einkochen-leicht-gemacht.git', 'main', '--rebase']);
               // Bearbeite den Commit lokal
               await exec.exec('git', ['commit', '--amend', '--allow-empty', '-m', newCommitMessage]);
               // Drücke die Änderungen auf das GitHub-Repository
