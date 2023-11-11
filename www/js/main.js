@@ -1,4 +1,5 @@
 let pages = ["home", "obst", "gemuese", "fleisch", "tipps", "produkte"];
+let version = "1.4.4";
 
 function observePageChanges() {
     const targetNode = document.querySelector("body");

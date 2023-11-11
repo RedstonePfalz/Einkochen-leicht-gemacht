@@ -4,10 +4,10 @@ document.querySelectorAll(".elg-btn").forEach(function(button) {
     });
 });
 
-if (!localStorage.getItem("updateNotice")) {
+if (localStorage.getItem("currentVersion") !== version) {
     $("#updateDialog").attr("open", "open");
 }
 
 document.getElementById("close-btn").addEventListener("click", function() {
-    localStorage.setItem("updateNotice", "true");
+    localStorage.setItem("currentVersion", version);
 });
