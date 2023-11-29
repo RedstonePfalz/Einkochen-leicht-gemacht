@@ -13,7 +13,7 @@
   "author": "RedstonePfalz",
   "license": "Apache-2.0",
   "dependencies": {
-    "@babel/core": "^7.23.3",
+    "@babel/core": "^7.23.5",
     "@babel/preset-env": "^7.23.3",
     "@material/web": "^1.0.1",
     "babel-loader": "^9.1.3",
