@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.0-pre.1](https://github.com/RedstonePfalz/Einkochen-leicht-gemacht/compare/1.0.0-pre.0...v1.0.0-pre.1) (2023-11-11)
+## [1.4.5](https://github.com/RedstonePfalz/Einkochen-leicht-gemacht/compare/1.0.0-pre.0...v1.0.0-pre.1) (2023-12-11)
 
 
 ### Features
@@ -28,8 +28,3 @@
 * Set screen orientation to portrait ([702dec5](https://github.com/RedstonePfalz/Einkochen-leicht-gemacht/commit/702dec59e67657b0dfeb76fc6f0791c3e47fa9a6))
 * Update Content-Security-Policy ([fc05e62](https://github.com/RedstonePfalz/Einkochen-leicht-gemacht/commit/fc05e626b7aca77608df05d00e0587f728d1f22e))
 * **vegetables-page:** Change text of slider ([42528fd](https://github.com/RedstonePfalz/Einkochen-leicht-gemacht/commit/42528fd5683a55a33b156a47aec8c0bd2d80401a))
-
-
-### Miscellaneous Chores
-
-* release 1.0.0-pre.1 ([52c0d2c](https://github.com/RedstonePfalz/Einkochen-leicht-gemacht/commit/52c0d2c1809ff3ad57de212c8aa99b4b606796a0))
