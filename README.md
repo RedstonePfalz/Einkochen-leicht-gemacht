@@ -1,5 +1,6 @@
 # Einkochen leicht gemacht - DE
 
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=RedstonePfalz_Einkochen-leicht-gemacht&metric=ncloc)]()
 [![Made for Android](https://img.shields.io/badge/Made%20for%20Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)]()
 [![Play Store](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=de.redstonepfalz.einkochen&utm_source=elg-web-github&utm_campaign=github)
 [![WebApp](https://img.shields.io/badge/WebApp-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white)](https://redstonepfalz.github.io/einkochen-leicht-gemacht)
