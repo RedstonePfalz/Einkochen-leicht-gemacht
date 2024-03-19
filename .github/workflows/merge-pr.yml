@@ -60,7 +60,7 @@ jobs:
               const commitDescription = commitData.data.message;
 
               // Replace "Co-authored-by" in the commit message
-              const newCommitMessage = commitDescription + "\nCo-authored-by: AdministrationBot <147314055+AdministrationBot@users.noreply.github.com>";
+              const newCommitMessage = commitDescription + "\nCo-authored-by: AdministrationBot <147314055+AdministrationBot@users.noreply.github.com>\nCo-authored-by: RedstonePfalz <55254344+RedstonePfalz@users.noreply.github.com>";
               console.log(newCommitMessage);
               
               // Konfiguriere Git mit dem GitHub-Benutzernamen und -E-Mail
