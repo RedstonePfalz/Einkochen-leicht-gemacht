@@ -1,7 +1,7 @@
 {
   "name": "de.redstonepfalz.einkochen",
   "displayName": "Einkochen leicht gemacht",
-  "version": "1.4.5",
+  "version": "1.4.6    ",
   "description": "Einkochen leicht gemacht",
   "main": "index.js",
   "scripts": {
